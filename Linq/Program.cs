@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 
 namespace Linq
@@ -11,7 +12,7 @@ namespace Linq
             int[] numbers = new int[] { 2, 3, 4, 5 };
 
             //Define the query expression
-            var result = numbers
+            IEnumerable result = numbers
                 .Where(x => x % 2 == 0)
                 .Select(x => x * 10);
 
